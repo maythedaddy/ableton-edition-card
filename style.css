@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;600;700&display=swap');
+
+:root {
+  --intro-color-1: #41AB70;
+  --intro-color-2: #047258;
+  --standard-color-1: #16B2CB;
+  --standard-color-2: #0A99D5;
+  --suite-color-1: #6A6B82;
+  --suite-color-2: #3A3844;
+}
+
+/*****************
+Base
+******************/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Hind', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 5rem;
+}
+
+/*****************
+* Container
+******************/
+
+.container {
+  background-color: #FFF;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*****************
+* Logo
+******************/
+
+/*****************
+* Card
+******************/
+
+.card {
+  /* border: 1px solid black; */
+  width: 300px;
+  height: 520px;
+  box-shadow: 0 2.5rem 2rem -2rem hsl(200 50% 20% / 40%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:not(:last-child) {
+  margin-right: 10rem;
+}
+
+.card.card--intro {
+  background-image: linear-gradient(180deg,
+      var(--intro-color-1) 0%,
+      var(--intro-color-1) 50%,
+      var(--intro-color-2) 50%);
+}
+
+.card.card--standard {
+  background-image: linear-gradient(180deg,
+      var(--standard-color-1) 0%,
+      var(--standard-color-1) 50%,
+      var(--standard-color-2) 50%);
+}
+
+.card.card--suite {
+  background-image: linear-gradient(180deg,
+      var(--suite-color-1) 0%,
+      var(--suite-color-1) 50%,
+      var(--suite-color-2) 50%);
+}
+
+.top {
+  padding: 3rem 4rem;
+  color: #F1FEF9;
+}
+
+.top h3 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.top p {
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+.bottom {
+  padding: 3rem 4rem;
+  color: #F1FEF9;
+  margin: 0 auto;
+}
+
+.bottom .price {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+/*****************
+* Button
+******************/
+.btn {
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  border: none;
+  background-color: #FFF;
+  width: 20rem;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn--intro {
+  color: var(--intro-color-2);
+}
+
+.btn--standard {
+  color: var(--standard-color-2);
+}
+
+.btn--suite {
+  color: var(--suite-color-2);
+}
